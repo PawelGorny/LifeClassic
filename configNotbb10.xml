@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns="http://www.w3.org/ns/widgets" 
+        xmlns:rim="http://www.blackberry.com/ns/widgets" 
+		version="1.1.3" 
+		rim:header="RIM-Widget:rim/widget">
+	<name>LifeClassic</name>
+	<description>Game of life (classic version)</description>
+	<content src="index.html"/>
+	<icon src="icon.png"/>
+
+<access subdomains="true" uri="http://www.blackberry.com/">
+    <feature  id="blackberry.advertising" required="true" version="1.0.0"/>
+</access> 
+<access subdomains="false" uri="*"/>
+<author rim:copyright="Pawel Gorny 2012" href="http://pawelgorny.com/">PGUI</author>
+	
+</widget>

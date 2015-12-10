@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width,target-densitydpi=device-dpi,user-scalable=no,initial-scale=1.0">
+        <script  src="./js/life.js" ></script>
+        <script type="text/javascript" src="http://www.blackberry.com/app_includes/asdk/adBanner.js"></script>
+        <link rel="stylesheet" href="./css/life.css" type="text/css" media="all" />
+    </head>
+    
+    <body onload="setTable();">
+        <b>Game of Life</b><br/>
+        <input type="button" value="Rules of the game" class="but" style="width: auto;" onclick="showRules();"/>
+            <div class="rules" id="rules" style="display:none;">
+                <a href="https://en.wikipedia.org/wiki/Conway's_Game_of_Life" >Conway's Game of Life on the Wikipedia</a><br/>
+The Game of Life, also known simply as Life, is a cellular automaton devised by the British mathematician John Horton Conway in 1970.
+<br/>The universe of the Game of Life is an infinite two-dimensional orthogonal grid of square cells, each of which is in one of two possible
+states, alive or dead. Every cell interacts with its eight neighbours, which are the cells that are horizontally, vertically, or diagonally
+adjacent. At each step in time, the following transitions occur:
+<ul>
+    <li>Any live cell with fewer than two live neighbours dies, as if caused by under-population.</li>
+    <li>Any live cell with two or three live neighbours lives on to the next generation.</li>
+    <li>Any live cell with more than three live neighbours dies, as if by overcrowding.</li>
+    <li>Any dead cell with exactly three live neighbours becomes a live cell, as if by reproduction.</li>
+</ul>
+<b>Please set dimensions of the grid, then tap the cells You want to set as a 'alive' or use 'randomize' button.</b>
+<br/>
+                <input type="button" value="hide" onclick="showRules()"/>
+            </div>
+        <div id="menu" style="width: auto;">
+            <div>
+            Set Your grid: &nbsp;
+            cols: <input type="number" min="5" max="30" value="14" name="cols" id="cols" style="width: 50px;"/>  x  
+            rows: <input type="number" min="5" max="20" value="5" name="rows" id="rows" style="width: 50px;" />    <br/>
+            <span id="spanSN" style="display:block">
+                    Steps: <span id="stepNumber">0</span>
+            </span>
+            <input type="button" id="setButton" value="reset grid" onclick="setTable();" class="but"/>
+            <input type="button" id="randomize" value="randomize" onclick="randomize();" class="but"/>
+            <input type="button" id="startButton" value="start" onclick="start();"  class="but" style="display: none"/>
+            
+            <span id="spanStable" style="display:none"></span>
+            </div>
+        </div>
+
+        <div id="lifeTable" style="float: left"></div>
+        <br/>
+        <div  id="divIdBanner"></div>
+        
+<script type="text/javascript">
+    var zoneId = 117722;
+    var bannerObj = new blackberry.advertising.Banner(zoneId, "divIdBanner");
+</script>
+    </body>
+</html>
